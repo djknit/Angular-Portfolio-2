@@ -5,7 +5,9 @@ angular
     'core',
     [
       'core.about',
-      'core.contact',
-      'core.projects'
+      'core.contactMethods',
+      'core.projects',
+      'core.tech',
+      'core.paragraphPieces'
     ]
   );

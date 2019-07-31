@@ -2,6 +2,7 @@ angular
   .module(
     'projectCard',
     [
-      'techList'
+      'techList',
+      'linkButton'
     ]
   );
