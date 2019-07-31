@@ -2,6 +2,6 @@
 
 angular
   .module(
-    'core.contact',
+    'core.contactMethods',
     []
   );

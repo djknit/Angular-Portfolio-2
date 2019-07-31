@@ -5,9 +5,10 @@ angular
   .component('projectsSection', {
     templateUrl: 'components/projects-section/projects.template.html',
     controller: [
-      'ProjectList',
-      function projectsSectionCtrl(ProjectList) {
-        this.projectDataFileNames = ProjectList;
+      'Projects',
+      function projectsSectionCtrl(Projects) {
+        this.projects = Projects;
+        console.log(Projects);
       }
     ]
   });

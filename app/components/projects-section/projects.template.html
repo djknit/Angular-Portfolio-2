@@ -2,8 +2,8 @@
   <div class="cards container">
     <div class="row">
 
-      <div class="col-xl-6" ng-repeat="fileName in $ctrl.projectDataFileNames">
-        <project-card project-data-file-name="{{fileName}}"></project-card>
+      <div class="col-xl-6" ng-repeat="project in $ctrl.projects">
+        <project-card project="project"></project-card>
       </div>
 
     </div>

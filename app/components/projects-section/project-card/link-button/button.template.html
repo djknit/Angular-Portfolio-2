@@ -1,0 +1,19 @@
+<a
+  ng-attr-href="$ctrl.url"
+  class="btn btn-secondary"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span ng-if="$ctrl.type === 'repo'">
+    Repository
+  </span>
+  <span ng-if="$ctrl.type === 'live'">
+    Deployed<br />Page
+  </span>
+  <span ng-if="$ctrl.type === 'video'">
+    Demo<br />Video
+  </span>
+  <span ng-if="$ctrl.type === 'readme'">
+    Readme
+  </span>
+</a>

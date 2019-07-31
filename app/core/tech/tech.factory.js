@@ -2,7 +2,8 @@
 
 angular
   .module('core.tech')
-  .factory('Technologies', [
+  .factory(
+    'Tech',
     function techFactory() {
 
       function Technology(name, url) {
@@ -12,7 +13,7 @@ angular
         }
       }
 
-      return {
+      const technologies = {
         react: Technology('React', 'https://reactjs.org/'),
         bulma: Technology('Bulma', 'https://bulma.io/'),
         bootstrap: Technology('Bootstrap', 'https://getbootstrap.com/'),
@@ -44,5 +45,15 @@ angular
         request: Technology('Request', 'https://www.npmjs.com/package/request'),
         dotenv: Technology('Dotenv', 'https://www.npmjs.com/package/dotenv')
       }
+
+      return {
+        technologies,
+        mapIdsToData(techIdsArray) {
+          return techIdsArray.map(function(id) {
+            if (!technologies[id]) throw Error(`Bad tech id: ${id}`);
+            return technologies[id];
+          });
+        }
+      }
     }
-  ]);
+  );
