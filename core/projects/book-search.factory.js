@@ -40,9 +40,11 @@ angular
           ])
         },
         notes: [
-          ParagraphPieces.Text(
-            'Many of the features of this app can be used without an account. If you wish to create an account, you can do so with only a username and password. For these reasons, there is no guest account for this app.'
-          )
+          {
+            pieces: ParagraphPieces.Text(
+              'Many of the features of this app can be used without an account. If you wish to create an account, you can do so with only a username and password. For these reasons, there is no guest account for this app.'
+            )
+          }
         ],
         links: {
           repo: 'https://github.com/djknit/google-books-search/',

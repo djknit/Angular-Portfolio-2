@@ -61,31 +61,3 @@
 .project > .card-footer > .btn-group {
   width: 100%;
 }
-
-.project > .card-footer > .btn-group > .btn {
-  border: 2px solid #aaaaaa;
-  border-radius: 0;
-  color: white;
-  padding: 0;
-  flex: 1 1 0;
-  vertical-align: middle;
-  display: flex;
-  box-shadow: 1.5px 3px 1.5px #525252;
-}
-
-.project > .card-footer > .btn-group > .btn:focus {
-  border: 2px solid #6c757d;
-  box-shadow: none;
-}
-
-.project > .card-footer .btn > span {
-  margin: auto;
-}
-
-.project > .card-footer > .btn-group .btn:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-.project > .card-footer > .btn-group .btn:last-child {
-  border-bottom-right-radius: 10px;
-}
