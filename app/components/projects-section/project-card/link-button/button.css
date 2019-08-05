@@ -1,0 +1,34 @@
+link-button {
+  flex: 1 1 0;
+  display: flex;
+}
+
+.project-link.btn {
+  border: 2px solid #aaaaaa;
+  border-radius: 0;
+  color: white;
+  padding: 0;
+  vertical-align: middle;
+  box-shadow: 1.5px 3px 1.5px #525252;
+  height: 100%;
+  width: 100%;
+  flex: 1 1 0;
+  display: flex;
+}
+
+.project-link.btn:focus {
+  border: 2px solid #6c757d;
+  box-shadow: none;
+}
+
+.project-link.btn > span {
+  margin: auto;
+}
+
+link-button:first-child > .project-link.btn {
+  border-bottom-left-radius: 10px;
+}
+
+link-button:last-child > .project-link.btn {
+  border-bottom-right-radius: 10px;
+}
