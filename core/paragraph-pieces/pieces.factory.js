@@ -14,7 +14,7 @@ angular
         },
         Break() {
           return {
-            type: 'break'
+            type: 'line break'
           }
         },
         Link(text, url) {

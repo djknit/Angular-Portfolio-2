@@ -8,6 +8,7 @@ angular
       'ContactMethods',
       function contactMethodCtrl(ContactMethods) {
         this.contactMethods = ContactMethods;
+        console.log(ContactMethods);
       }
     ]
   });

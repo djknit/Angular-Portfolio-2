@@ -6,6 +6,7 @@ angular
     templateUrl: 'components/projects-section/project-card/tech-list/list.template.html',
     bindings: {
       techList: '<',
-      listName: '@'
+      listName: '@',
+      className: '@'
     }
   });

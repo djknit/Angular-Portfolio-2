@@ -47,10 +47,9 @@ angular
       }
 
       return {
-        technologies,
         mapIdsToData(techIdsArray) {
           return techIdsArray.map(function(id) {
-            if (!technologies[id]) throw Error(`Bad tech id: ${id}`);
+            if (!technologies[id]) throw Error(`Bad tech id: "${id}"`);
             return technologies[id];
           });
         }

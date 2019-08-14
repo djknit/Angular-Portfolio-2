@@ -26,12 +26,14 @@
       <div class="col-6">
         <tech-list
           list-name="Front End"
+          class-name="front"
           ng-if="$ctrl.project.tech.front.length > 0"
           tech-list="$ctrl.project.tech.front"
         ></tech-list>
         <br ng-if="$ctrl.project.tech.front.length > 0 && $ctrl.project.tech.apis.length > 0" />
         <tech-list
           list-name="Public APIs"
+          class-name="apis"
           ng-if="$ctrl.project.tech.apis.length > 0"
           tech-list="$ctrl.project.tech.apis"
         ></tech-list>
@@ -39,6 +41,7 @@
       <div class="col-6">
         <tech-list
           list-name="Back End"
+          class-name="back"
           ng-if="$ctrl.project.tech.back.length > 0"
           tech-list="$ctrl.project.tech.back"
         ></tech-list>
