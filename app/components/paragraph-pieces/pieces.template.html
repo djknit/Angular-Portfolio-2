@@ -1,9 +1,11 @@
-<span ng-repeat="piece in $ctrl.pieces">
-  <span ng-if="piece.type === 'text'">{{piece.text}}</span>
-  <br ng-if="piece.type === 'line break'" />
-  <text-link
-    ng-if="piece.type === 'link'"
-    url="{{piece.url}}"
-    text="{{piece.text}}"
-  />
-</span>
+<span
+  ng-repeat="piece in $ctrl.pieces"
+><span
+  ng-if="piece.type === 'text'"
+>{{piece.text}}</span><br
+  ng-if="piece.type === 'line break'"
+/><text-link
+  ng-if="piece.type === 'link'"
+  url="{{piece.url}}"
+  text="{{piece.text}}"
+/></span>

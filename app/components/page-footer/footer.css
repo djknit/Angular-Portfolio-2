@@ -1,4 +1,4 @@
-#footer {
+#page-footer {
   height: 40px;
   margin-top: 40px;
   background-color: #aaaaaa;
@@ -7,7 +7,7 @@
   text-align: right;
 }
 
-#footer > a {
+#page-footer > a {
   color: #1e1e1e;
   position: relative;
   display: inline-block;
@@ -15,7 +15,8 @@
   text-align: center;
 }
 
-#footer > a:hover {
+#page-footer > a:hover {
   color: #040404;
   font-weight: 500;
+  text-decoration: none;
 }

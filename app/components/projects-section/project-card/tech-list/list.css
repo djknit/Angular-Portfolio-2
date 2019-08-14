@@ -34,4 +34,5 @@ ul.tech-list > li > a {
 ul.tech-list > li > a:hover {
   font-weight: 500;
   color: #202020;
+  text-decoration: none;
 }
