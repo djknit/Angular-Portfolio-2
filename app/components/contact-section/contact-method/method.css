@@ -14,6 +14,7 @@
 
 .contact-method:hover {
   animation: shake 1s infinite;
+  text-decoration: none;
 }
 
 .contact-method:focus {
@@ -43,10 +44,61 @@
   font-size: 26px;
 }
 
-.contact-method img.heartbeat {
+.contact-method:hover img {
   animation: heartbeat 500ms infinite;
 }
 
-.contact-method span.heartbeat {
+.contact-method:hover span {
   animation: text-heartbeat 500ms infinite;
+}
+
+/* ---------------------------------------- */
+/* Animations */
+
+/* Contact method hover shake */
+@keyframes shake {
+  0% {
+      transform: rotate(0) translate(0, 0);
+  }
+  25% {
+      transform: rotate(-10deg) translate(0, -20px);
+  }
+  50% {
+      transform: rotate(0) translate(0, 0);
+  }
+  75% {
+      transform: rotate(10deg) translate(0, -20px);
+  }
+  100% {
+      transform: rotate(0)  translate(0, 0);
+  }
+}
+
+/* Contact method image hover heartbeat effect */
+@keyframes heartbeat {
+  0% {
+      height: 34px;
+      width: auto;
+  }
+  50% {
+      height: 39px;
+      width: auto;
+  }
+  100% {
+      height: 34px;
+      width: auto;
+  }
+}
+
+/* Contact method text-logo hover heartbeat effect */
+@keyframes text-heartbeat {
+  0% {
+      font-size: 26px;
+  }
+  50% {
+      font-size: 31px;
+  }
+  100% {
+      font-size: 26px;
+  }
 }
