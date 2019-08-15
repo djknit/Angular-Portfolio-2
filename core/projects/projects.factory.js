@@ -12,7 +12,17 @@ angular
     'liri',
     'newsScraper',
     'rpg',
-    function projectsFactory(billSplitter, cerebellum, bookSearch, burger, expense, friendFinder, liri, newsScraper, rpg) {
+    function projectsFactory(
+      billSplitter,
+      cerebellum,
+      bookSearch,
+      burger,
+      expense,
+      friendFinder,
+      liri,
+      newsScraper,
+      rpg
+    ) {
       return [
         bookSearch,
         cerebellum,

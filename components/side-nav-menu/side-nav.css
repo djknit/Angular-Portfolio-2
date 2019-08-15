@@ -72,3 +72,87 @@ button#side-nav-toggle > i.fa-compass {
 #side-nav-menu > nav a:not(:last-of-type) {
   border-bottom: 1px solid whitesmoke;
 }
+
+/* ---------------------------------------- */
+/* Animations */
+
+/* open/close side nav menu */
+@keyframes open-side {
+  from {
+    height: 0;
+    width: 0;
+  }
+  to {
+    height: 127px;
+    width: 98.594px;
+  }
+}
+
+/* blink animation to help user notice side nav menu button */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes close-side {
+  from {
+    height: 127px;
+    width: 98.594px;
+  }
+  to {
+    height: 0;
+    width: 0;
+  }
+}
+
+/* ---------------------------------------- */
+/* Breakpoints */
+
+/* SMALL */
+@media screen and (max-width: 767.5px) {
+  #side-nav-menu[state="hide-768"] {
+    display: none;
+  }
+}
+
+/* EXTRA SMALL (a little smaller than Bootstrap's XS) */
+@media screen and (max-width: 551px) {
+  #side-nav-menu[state="hide-552"] {
+    display: none;
+  }
+}
+
+/* SMALLEST (almost) */
+@media screen and (max-width: 380px) {
+  #side-nav-menu[state="hide-381"] {
+    display: none;
+  }
+
+  button#side-nav-toggle {
+    height: 20px;
+    width: 20px;
+  }
+  
+  button#side-nav-toggle > i.fa-compass {
+    top: 1px;
+    left: 1px;
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+  }
+
+  #side-nav-menu > nav {
+    top: 10px;
+    left: 10px;
+  }
+}

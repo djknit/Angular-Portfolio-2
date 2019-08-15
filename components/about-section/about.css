@@ -33,6 +33,10 @@
   font-weight: 700;
 }
 
+#main-heading > br {
+  display: none;
+}
+
 #about-basic {
   height: 252px;
   width: 90%;
@@ -82,4 +86,252 @@ span.placeholder {
 
 #toggle-about-basic:focus {
   outline: none;
+}
+
+/* ---------------------------------------- */
+/* Animations */
+
+/* open/close animation for about section */
+@keyframes open {
+  from { height: 252px; }
+  to { height: 360px; }
+}
+
+@keyframes close {
+  from { height: 360px; }
+  to { height: 252px; }
+}
+
+/* Flip arrow animation for about open/close button */
+/* -- Source: https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text (user: Duopixel) */
+@keyframes flip-up {
+  from {
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  to {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);        
+  }
+}
+
+@keyframes flip-down {
+  from {
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);   
+  }
+  to {
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+/* Fade in/out animation */
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;      
+  }
+}
+
+@keyframes fade-out {
+  from {
+      opacity: 1;  
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+/* ---------------------------------------- */
+/* Breakpoints */
+
+/* LARGE (2nd widest) */
+@media screen and (max-width: 1199px) {
+  #about-basic {
+    height: 296px;
+  }
+
+  /* open/close animation for about section */
+  @keyframes open {
+    from { height: 296px; }
+    to { height: 435px; }
+  }
+
+  @keyframes close {
+    from { height: 435px; }
+    to { height: 296px; }
+  }
+}
+
+/* MEDIUM */
+@media screen and (max-width: 991px) {
+  span.placeholder {
+    display: none;
+  }
+
+  #about-basic {
+    height: 365px;
+  }
+
+  /* open/close animation for about section */
+  @keyframes open {
+    from { height: 365px; }
+    to { height: 554px; }
+  }
+
+  @keyframes close {
+    from { height: 554px; }
+    to { height: 365px; }
+  }
+}
+
+/* SMALL */
+@media screen and (max-width: 767.5px) {
+  #profile-pic {
+    top: 0;
+    height: 200px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+
+  #main-heading {
+    padding-left: 199px;
+  }
+
+  #about {
+    padding-top: 5px;
+  }
+
+  #about-basic {
+    height: 464px;
+  }
+
+  /* open/close animation for about section */
+  @keyframes open {
+    from { height: 464px; }
+    to { height: 720px; }
+  }
+
+  @keyframes close {
+    from { height: 720px; }
+    to { height: 464px; }
+  }
+}
+
+/* EXTRA SMALL (a little smaller than Bootstrap's XS) */
+@media screen and (max-width: 551px) {
+  #profile-pic {
+    position: static;
+    float: left;
+    border-bottom-left-radius: 0;
+    margin-right: 15px;
+  }
+
+  #main-heading {
+    padding-left: 5px;
+  }
+
+  #about {
+    padding-top: 5px;
+  }
+
+  #about-basic {
+    height: 630px;
+  }
+
+  /* open/close animation for about section */
+  @keyframes open {
+    from { height: 630px; }
+    to { height: 962px; }
+  }
+
+  @keyframes close {
+    from { height: 962px; }
+    to { height: 630px; }
+  }
+}
+
+/* DOUBLE EXTRA SMALL */
+@media screen and (max-width: 415px) {
+  h1#main-heading > span {
+    display: inline-block;
+    max-width: 115px;
+    margin-bottom: 50px;
+  }
+
+  #main-heading > br {
+    display: inline-block;
+  }
+
+  /* open/close animation for about section */
+  @keyframes open {
+    from { height: 630px; }
+    to { height: 979px; }
+  }
+
+  @keyframes close {
+    from { height: 979px; }
+    to { height: 630px; }
+  }
+}
+
+/* SMALLEST (almost) */
+@media screen and (max-width: 380px) {
+  h1#main-heading {
+    margin-top: 30px;
+  }
+
+  #main-heading > br:last-child {
+    display: none;
+  }
+
+  #about-basic {
+    height: 726px;
+  }
+
+  /* open/close animation for about section */
+  @keyframes open {
+    from { height: 726px; }
+    to { height: 1103px; }
+  }
+
+  @keyframes close {
+    from { height: 1103px; }
+    to { height: 726px; }
+  }
+}
+
+@media screen and (max-width: 348px) {
+  h1#main-heading > span {
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  #about-header {
+    width: calc(100% - 10px);
+  }
+
+  #about-basic {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

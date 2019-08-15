@@ -54,3 +54,56 @@ header nav a:last-child {
   border: none;
   padding-right: 0;
 }
+
+/* ---------------------------------------- */
+/* Breakpoints */
+
+/* SMALL */
+@media screen and (max-width: 767.5px) {
+  header {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  header hr {
+    display: block;
+  }
+  
+  header nav {
+    float: none;
+  }
+}
+
+/* EXTRA SMALL (a little smaller than Bootstrap's XS) */
+@media screen and (max-width: 551px) {
+  header {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  header hr {
+    display: block;
+  }
+
+  header nav {
+    float: none;
+  }
+}
+
+/* SMALLEST (almost) */
+@media screen and (max-width: 380px) {
+  header nav > a:first-child {
+    margin-left: 18px;
+  }
+
+  header nav > a:nth-child(3) {
+    border: none;
+  }
+
+  header nav > a:last-child {
+    text-align: center;
+    border-top: solid white .2px;
+    margin-top: 7.5px;
+    padding-top: 7.5px;
+  }
+}
