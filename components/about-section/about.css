@@ -91,7 +91,7 @@ span.placeholder {
 /* ---------------------------------------- */
 /* Animations */
 
-/* open/close animation for about section */
+/* open/close animation for #about-basic */
 @keyframes open {
   from { height: 252px; }
   to { height: 360px; }
@@ -166,7 +166,7 @@ span.placeholder {
     height: 296px;
   }
 
-  /* open/close animation for about section */
+  /* open/close animation for #about-basic */
   @keyframes open {
     from { height: 296px; }
     to { height: 435px; }
@@ -188,7 +188,7 @@ span.placeholder {
     height: 365px;
   }
 
-  /* open/close animation for about section */
+  /* open/close animation for #about-basic */
   @keyframes open {
     from { height: 365px; }
     to { height: 554px; }
@@ -225,7 +225,7 @@ span.placeholder {
     height: 464px;
   }
 
-  /* open/close animation for about section */
+  /* open/close animation for #about-basic */
   @keyframes open {
     from { height: 464px; }
     to { height: 720px; }
@@ -258,7 +258,7 @@ span.placeholder {
     height: 630px;
   }
 
-  /* open/close animation for about section */
+  /* open/close animation for #about-basic */
   @keyframes open {
     from { height: 630px; }
     to { height: 962px; }
@@ -282,7 +282,7 @@ span.placeholder {
     display: inline-block;
   }
 
-  /* open/close animation for about section */
+  /* open/close animation for #about-basic */
   @keyframes open {
     from { height: 630px; }
     to { height: 979px; }
@@ -294,7 +294,7 @@ span.placeholder {
   }
 }
 
-/* SMALLEST (almost) */
+/* ALMOST-SMALLEST */
 @media screen and (max-width: 380px) {
   h1#main-heading {
     margin-top: 30px;
@@ -308,7 +308,7 @@ span.placeholder {
     height: 726px;
   }
 
-  /* open/close animation for about section */
+  /* open/close animation for #about-basic */
   @keyframes open {
     from { height: 726px; }
     to { height: 1103px; }
@@ -320,12 +320,14 @@ span.placeholder {
   }
 }
 
-@media screen and (max-width: 348px) {
+@media screen and (max-width: 370px) {
   h1#main-heading > span {
     max-width: none;
     margin-bottom: 0;
   }
+}
 
+@media screen and (max-width: 348px) {
   #about-header {
     width: calc(100% - 10px);
   }

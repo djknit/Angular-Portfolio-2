@@ -12,8 +12,13 @@
       hunger for knowledge
     </h1>
   </div>
-  <div id="about-basic">
-    <h2 class="about">About Me</h2>
+  <div
+    id="about-basic"
+    ng-style="$ctrl.aboutBasicStyle()"
+  >
+    <h2 class="about" ng-ref="$ctrl.heading">
+      About Me
+    </h2>
     <p class="about">
       <span class="placeholder">&nbsp;</span> I am a Full-Stack Developer
       with a passion for creating user-friendly, functional tools that
@@ -40,7 +45,7 @@
       build my knowledge of web-based development, I hope to also continue
       to expand my knowledge to include other areas of software development.
     </p>
-  </div>
+  </divid="about-basic">
   <button type="button" id="toggle-about-basic" state="closed">
     <span>Show More</span> <i class="fas fa-arrow-down"></i>
   </button>
