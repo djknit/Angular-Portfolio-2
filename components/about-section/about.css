@@ -38,7 +38,7 @@
 }
 
 #about-basic {
-  height: 252px;
+  /* height: 252px; */
   width: 90%;
   margin-left: 5%;
   background-color: #efefef;
@@ -88,18 +88,67 @@ span.placeholder {
   outline: none;
 }
 
+#toggle-about-basic.fade-out > span {
+  animation-name: fade-out;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#toggle-about-basic.fade-in > span {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#toggle-about-basic.open > i.fas {
+  animation-name: flip-up;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#toggle-about-basic.closed > i.fas {
+  animation-name: flip-down;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#about-basic > p.open {
+  animation-name: open;
+  animation-duration: 2s;
+  /* animation-timing-function: linear; */
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#about-basic > p.closed {
+  animation-name: close;
+  animation-duration: 2s;
+  /* animation-timing-function: linear; */
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 /* ---------------------------------------- */
 /* Animations */
 
 /* open/close animation for #about-basic */
 @keyframes open {
-  from { height: 252px; }
-  to { height: 360px; }
+  from { 
+    height: 0;
+    margin-bottom: 0;
+  }
+  to {
+    margin-bottom: 16px;
+  }
 }
 
 @keyframes close {
-  from { height: 360px; }
-  to { height: 252px; }
+  from {
+    margin-bottom: 16px;
+  }
+  to {
+    height: 0;
+    margin-bottom: 0;
+  }
 }
 
 /* Flip arrow animation for about open/close button */
@@ -141,19 +190,19 @@ span.placeholder {
 /* Fade in/out animation */
 @keyframes fade-in {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;      
+    opacity: 1;      
   }
 }
 
 @keyframes fade-out {
   from {
-      opacity: 1;  
+    opacity: 1;  
   }
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
@@ -162,12 +211,12 @@ span.placeholder {
 
 /* LARGE (2nd widest) */
 @media screen and (max-width: 1199px) {
-  #about-basic {
+  /* #about-basic {
     height: 296px;
-  }
+  } */
 
   /* open/close animation for #about-basic */
-  @keyframes open {
+  /* @keyframes open {
     from { height: 296px; }
     to { height: 435px; }
   }
@@ -175,7 +224,7 @@ span.placeholder {
   @keyframes close {
     from { height: 435px; }
     to { height: 296px; }
-  }
+  } */
 }
 
 /* MEDIUM */
@@ -184,12 +233,12 @@ span.placeholder {
     display: none;
   }
 
-  #about-basic {
+  /* #about-basic {
     height: 365px;
-  }
+  } */
 
   /* open/close animation for #about-basic */
-  @keyframes open {
+  /* @keyframes open {
     from { height: 365px; }
     to { height: 554px; }
   }
@@ -197,7 +246,7 @@ span.placeholder {
   @keyframes close {
     from { height: 554px; }
     to { height: 365px; }
-  }
+  } */
 }
 
 /* SMALL */
@@ -221,12 +270,12 @@ span.placeholder {
     padding-top: 5px;
   }
 
-  #about-basic {
+  /* #about-basic {
     height: 464px;
-  }
+  } */
 
   /* open/close animation for #about-basic */
-  @keyframes open {
+  /* @keyframes open {
     from { height: 464px; }
     to { height: 720px; }
   }
@@ -234,7 +283,7 @@ span.placeholder {
   @keyframes close {
     from { height: 720px; }
     to { height: 464px; }
-  }
+  } */
 }
 
 /* EXTRA SMALL (a little smaller than Bootstrap's XS) */
@@ -250,16 +299,16 @@ span.placeholder {
     padding-left: 5px;
   }
 
-  #about {
+  /* #about {
     padding-top: 5px;
-  }
+  } */
 
-  #about-basic {
+  /* #about-basic {
     height: 630px;
-  }
+  } */
 
   /* open/close animation for #about-basic */
-  @keyframes open {
+  /* @keyframes open {
     from { height: 630px; }
     to { height: 962px; }
   }
@@ -267,7 +316,7 @@ span.placeholder {
   @keyframes close {
     from { height: 962px; }
     to { height: 630px; }
-  }
+  } */
 }
 
 /* DOUBLE EXTRA SMALL */
@@ -283,7 +332,7 @@ span.placeholder {
   }
 
   /* open/close animation for #about-basic */
-  @keyframes open {
+  /* @keyframes open {
     from { height: 630px; }
     to { height: 979px; }
   }
@@ -291,7 +340,7 @@ span.placeholder {
   @keyframes close {
     from { height: 979px; }
     to { height: 630px; }
-  }
+  } */
 }
 
 /* ALMOST-SMALLEST */
@@ -304,12 +353,12 @@ span.placeholder {
     display: none;
   }
 
-  #about-basic {
+  /* #about-basic {
     height: 726px;
-  }
+  } */
 
   /* open/close animation for #about-basic */
-  @keyframes open {
+  /* @keyframes open {
     from { height: 726px; }
     to { height: 1103px; }
   }
@@ -317,7 +366,7 @@ span.placeholder {
   @keyframes close {
     from { height: 1103px; }
     to { height: 726px; }
-  }
+  } */
 }
 
 @media screen and (max-width: 370px) {

@@ -12,10 +12,7 @@
       hunger for knowledge
     </h1>
   </div>
-  <div
-    id="about-basic"
-    ng-style="$ctrl.aboutBasicStyle()"
-  >
+  <div id="about-basic" ng-class="$ctrl.openOrClosed()">
     <h2 class="about" ng-ref="$ctrl.heading">
       About Me
     </h2>
@@ -36,7 +33,7 @@
       team-driven environments. I can follow directions well, or take
       initiative where appropriate.
     </p>
-    <p class="about">
+    <p class="about" ng-style="$ctrl.lastPStyle()" ng-class="$ctrl.openOrClosed()">
       I was born and raised in Manhattan KS. I moved to Lawrence to attend KU and have stayed there
       ever since. My interests include all things related to math, science, and music.
       I enjoy coding because it, like math, involves the manipulation of precisely
@@ -45,8 +42,13 @@
       build my knowledge of web-based development, I hope to also continue
       to expand my knowledge to include other areas of software development.
     </p>
-  </divid="about-basic">
-  <button type="button" id="toggle-about-basic" state="closed">
-    <span>Show More</span> <i class="fas fa-arrow-down"></i>
+  </div>
+  <button
+    type="button"
+    id="toggle-about-basic"
+    ng-class="$ctrl.toggleButtonClass()"
+    ng-click="$ctrl.toggleAboutSection()"
+  >
+    <span>{{$ctrl.toggleButtonText}}</span> <i ng-class="'fas fa-arrow-down ' + $ctrl.iconFlip"></i>
   </button>
 </section>
