@@ -29,7 +29,6 @@ angular
         expense,
         newsScraper,
         rpg,
-        billSplitter,
         burger,
         friendFinder,
         liri
